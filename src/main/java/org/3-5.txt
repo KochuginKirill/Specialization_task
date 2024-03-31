@@ -1,0 +1,43 @@
+vb@kirill-VB:~$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+
+kvb@kirill-VB:~$ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+
+kvb@kirill-VB:~$ sudo apt-get update
+
+kvb@kirill-VB:~$ sudo apt-get install mysql-server
+
+kvb@kirill-VB:~$ systemctl status mysql
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset:>
+     Active: active (running) since Sat 2024-03-30 19:03:45 MSK; 1min 56s ago
+    Process: 7497 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=e>
+   Main PID: 7505 (mysqld)
+     Status: "Server is operational"
+      Tasks: 37 (limit: 4598)
+     Memory: 355.3M
+        CPU: 2.223s
+     CGroup: /system.slice/mysql.service
+             └─7505 /usr/sbin/mysqld
+
+мар 30 19:03:44 kirill-VB systemd[1]: Starting MySQL Community Server...
+мар 30 19:03:45 kirill-VB systemd[1]: Started MySQL Community Server.
+lines 1-14/14 (END)
+kvb@kirill-VB:~$ wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j_8.0.32-1ubuntu22.04_all.deb
+
+kvb@kirill-VB:~$ sudo dpkg -i mysql-connector-j_8.0.32-1ubuntu22.04_all.deb
+Selecting previously unselected package mysql-connector-j.
+(Reading database ... 191090 files and directories currently installed.)
+Preparing to unpack mysql-connector-j_8.0.32-1ubuntu22.04_all.deb ...
+Unpacking mysql-connector-j (8.0.32-1ubuntu22.04) ...
+Setting up mysql-connector-j (8.0.32-1ubuntu22.04) ...
+
+kvb@kirill-VB:~$ sudo dpkg -r mysql-connector-j
+(Reading database ... 191099 files and directories currently installed.)
+Removing mysql-connector-j (8.0.32-1ubuntu22.04) ...
+
+kvb@kirill-VB:~$ sudo apt-get autoremove
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 148 not upgraded.
+

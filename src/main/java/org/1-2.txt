@@ -1,0 +1,85 @@
+kvb@kirill-VB:~$ cat > 'Domestic animals'
+Dogs
+Cats
+Hamsters
+^C
+kvb@kirill-VB:~$ cat > 'Pack animals'
+Horses
+Camels
+Donkeys
+^C
+kvb@kirill-VB:~$ cat Domestic\ animals Pack\ animals > 'Animals'
+kvb@kirill-VB:~$ cat Animals
+Dogs
+Cats
+Hamsters
+Horses
+Camels
+Donkeys
+kvb@kirill-VB:~$ mv Animals Mans_friends
+kvb@kirill-VB:~$ mkdir newdir
+sudo mv Mans_friends newdir/
+kvb@kirill-VB:~$ tree
+.
+├── backup
+│   └── TXT_Backup.txt
+├── Desktop
+├── docker [error opening dir]
+├── Documents
+│   └── 1
+├── Domestic animals
+├── Downloads
+│   └── Механизмы контрольных групп_Контейнеризация.docx
+├── DZ2.txt
+├── DZ3.txt
+├── DZ4.txt
+├── f2
+├── files
+│   ├── f3 -> file1
+│   └── f4
+├── IdeaProjects
+│   └── test_project
+│       ├── pom.xml
+│       ├── src
+│       │   ├── main
+│       │   │   ├── java
+│       │   │   │   ├── Java.Dockerfile
+│       │   │   │   └── org
+│       │   │   │       └── example
+│       │   │   │           └── Main.java
+│       │   │   └── resources
+│       │   └── test
+│       │       └── java
+│       └── target
+│           ├── classes
+│           │   └── org
+│           │       └── example
+│           │           └── Main.class
+│           └── generated-sources
+│               └── annotations
+├── important.txt
+├── Music
+├── newdir
+│   └── Mans_friends
+├── Pack animals
+├── Pictures
+│   └── Screenshots
+│       ├── Screenshot from 2024-02-07 20-13-01.png
+│       ├── Screenshot from 2024-02-07 20-13-38.png
+│       └── Screenshot from 2024-02-07 20-13-55.png
+├── Public
+├── snap
+│   ├── firefox [error opening dir]
+│   ├── intellij-idea-community [error opening dir]
+│   ├── lxd [error opening dir]
+│   ├── snapd-desktop-integration [error opening dir]
+│   └── tree
+│       ├── 18
+│       ├── common
+│       └── current -> 18
+├── Templates
+├── testfolder
+│   └── bin
+├── Videos
+└── zip_3.0-12build2_amd64.deb
+
